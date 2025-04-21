@@ -1,33 +1,8 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-const str = "Bob"
-const num = 1
-const obj = {
-	name: str,
-	number: num,
-	favorites: ["astro", "css", "javascript"]
-}
-
-const isVisible = false;
-
-const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
-const data = await res.json();
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Component imports
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<!-- standart for get data -->
-	{<h1>{obj.favorites[isVisible ? [1] : [0]].toUpperCase()}</h1>}
-
-	<!-- jsx format -->
-	 {
-		data.map(item => (
-			<li>{item.title}</li>
-		))
-	 }
-	<Welcome />
+<Layout title="My Blog">
+    <h3>Hi From Home</h3>
 </Layout>
