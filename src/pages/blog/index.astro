@@ -3,7 +3,16 @@
 import Layout from "../../layouts/Layout.astro";
 import PostCard from "../../components/PostCard.astro";
 
-const matches = import.meta.glob('./*.md', {eager:true});
+type PostType = {
+  frontmatter: {
+    title: string;
+    date: string;
+    // etc.
+  };
+  url: string;
+};
+
+const matches = import.meta.glob('./*.md', {eager:true} ) as Record<string, PostType>;
 const posts = Object.values(matches);
 ---
 
