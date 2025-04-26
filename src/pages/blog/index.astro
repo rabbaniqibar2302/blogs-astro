@@ -3,13 +3,24 @@
 import Layout from "../../layouts/Layout.astro";
 import PostCard from "../../components/PostCard.astro";
 
-const allPost = await(Astro.glob("./*.md"));
-
+const matches = import.meta.glob('./*.md', {eager:true});
+const posts = Object.values(matches);
 ---
 
 <Layout title="My Blog">
-
-    <PostCard
-    post={allPost[0]}/>
-
+    <!-- <PostCard frontmatter={allPost[0].frontmatter} url={allPost[0].url} tagType="h2" /> -->
+    <section class="container" aria-label="New Blog Post">
+        <h1 class="h1">New Blog Post</h1>
+        <div class="post-container">
+            {
+                posts.map((post) => (
+                    <PostCard
+                        frontmatter={post.frontmatter}
+                        url={post.url}
+                        tagType="h2"
+                    />
+                ))
+            }
+        </div>
+    </section>
 </Layout>
