@@ -2,6 +2,9 @@
   "name": "",
   "type": "module",
   "version": "0.0.1",
+  "browserslist":[
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +12,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.4"
+    "@iconify-json/ic": "^1.1.18",
+    "astro": "^5.7.4",
+    "astro-icon": "^1.1.5",
+    "postcss": "^8.5.3",
+    "postcss-preset-env": "^10.1.6"
+  },
+  "overrides": {
+    "astro-icon": {
+      "cheerio": "1.0.0-rc.12"
+    }
   }
 }
