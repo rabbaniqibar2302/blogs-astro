@@ -1,23 +1,22 @@
 ---
 // Component imports
+import Link from "../components/Link.astro";
 import Layout from "../layouts/Layout.astro";
-
-// example how to use switch using boolean
-const isRed = false;
 ---
 
 <Layout title="My Blog">
-    <!-- u can call using class list and make another call using bridge from regular and boolean as map format -->
-    <h3 class:list={["big", {red : isRed}]}>Hi From About</h3>
+    <section class="container about" aria-label="About Me">
+        <img src="/images/headshot.jpg" alt="Me" width="200" height="330" />
+        <div class="content">
+            <h1 class="h1">My Blog</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
+                neque commodi eaque harum dignissimos magni esse eligendi
+                adipisci quae hic?
+            </p>
+            <Link href="https://www.instagram.com/hasqibar/"
+            style="primary"
+            text="Contact Me" />
+        </div>
+    </section>
 </Layout>
-
-<!-- regular css -->
-<style>
-    .big{
-        font-size: 2rem;
-    }
-
-    .red{
-        color: red;
-    }
-</style>

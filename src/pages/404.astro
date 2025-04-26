@@ -1,0 +1,31 @@
+---
+// Component imports
+import Link from "../components/Link.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Page Not Found">
+    <div
+        class="container"
+        style={{
+            display: "grid",
+            placeItems: "center",
+            textAlign: "center",
+            gap: "var(--space-sm)",
+        }}
+    >
+        <div>
+            <h1 class="h1">Welp, this is awkward!</h1>
+            <p>We seems misplace something...</p>
+        </div>
+        <Link
+            href="/"
+            style="secondary"
+            text="Go Home"
+            icon={{
+                name: "ic:round-home",
+                side: "left",
+            }}
+        />
+    </div>
+</Layout>

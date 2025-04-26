@@ -23,7 +23,9 @@ import Nav from '../components/Nav.astro';
 	<MainHead {title} {description}/>
 	<Nav/>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 	<Footer/>
 </html>

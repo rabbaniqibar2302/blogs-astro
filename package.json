@@ -2,7 +2,7 @@
   "name": "",
   "type": "module",
   "version": "0.0.1",
-  "browserslist":[
+  "browserslist": [
     "defaults"
   ],
   "scripts": {
@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^8.1.4",
     "@iconify-json/ic": "^1.1.18",
     "astro": "^5.7.4",
     "astro-icon": "^1.1.5",
