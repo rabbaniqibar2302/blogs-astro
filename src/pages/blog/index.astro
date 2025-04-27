@@ -7,7 +7,7 @@ type PostType = {
   frontmatter: {
     title: string;
     date: string;
-    // etc.
+    // u can add here 
   };
   url: string;
 };
@@ -17,7 +17,6 @@ const posts = Object.values(matches);
 ---
 
 <Layout title="My Blog">
-    <!-- <PostCard frontmatter={allPost[0].frontmatter} url={allPost[0].url} tagType="h2" /> -->
     <section class="container" aria-label="New Blog Post">
         <h1 class="h1">New Blog Post</h1>
         <div class="post-container">
